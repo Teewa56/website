@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FacebookIcon, TwitterIcon, InstagramIcon } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -10,11 +11,9 @@ export default function Footer() {
                         Connecting you directly with the freshest farm produce. Quality you can trust, delivered to your doorstep.
                     </p>
                     <div className="flex gap-4">
-                        {['fb', 'tw', 'inst'].map(s => (
-                            <div key={s} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--accent-green)] transition-colors cursor-pointer capitalize">
-                                {s}
-                            </div>
-                        ))}
+                        <FacebookIcon className="w-6 h-6" />
+                        <TwitterIcon className="w-6 h-6" />
+                        <InstagramIcon className="w-6 h-6" />
                     </div>
                 </div>
 
