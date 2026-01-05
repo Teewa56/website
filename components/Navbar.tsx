@@ -1,37 +1,84 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const scrollToFooter = (e: React.MouseEvent) => {
     e.preventDefault();
+    setIsOpen(false);
     const footer = document.getElementById("footer");
     if (footer) {
       footer.scrollIntoView({ behavior: "smooth" });
     }
   };
 
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Shop", href: "#shop" },
+    { name: "Pages", href: "#pages" },
+  ];
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#4B6F44]/90 backdrop-blur-md text-white py-4">
       <div className="section-container flex items-center justify-between">
-        <Image width={100} height={50} src="/images/luaro 1.png" alt="Logo" /> 
-        
+        <Image width={100} height={50} src="/images/luaro 1.png" alt="Logo" />
+
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="/" className="hover:text-[var(--accent-green)] transition-colors">Home</Link>
-          <Link href="#about" className="hover:text-[var(--accent-green)] transition-colors">About Us</Link>
-          <Link href="#services" className="hover:text-[var(--accent-green)] transition-colors">Services</Link>
-          <Link href="#shop" className="hover:text-[var(--accent-green)] transition-colors">Shop</Link>
-          <Link href="#pages" className="hover:text-[var(--accent-green)] transition-colors">Pages</Link>
+          {navLinks.map((link) => (
+            <Link key={link.name} href={link.href} className="hover:text-[var(--accent-green)] transition-colors">
+              {link.name}
+            </Link>
+          ))}
         </div>
 
-        <button 
-          onClick={scrollToFooter}
-          className="btn-primary bg-white text-[var(--primary-green)] hover:bg-[var(--accent-green)] hover:text-white"
-        >
-          Contact Us
-        </button>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={scrollToFooter}
+            className="hidden sm:block btn-primary bg-white text-[var(--primary-green)] hover:bg-[var(--accent-green)] hover:text-white"
+          >
+            Contact Us
+          </button>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Drawer */}
+      <div className={`md:hidden absolute top-full left-0 right-0 bg-[#4B6F44] border-t border-white/10 transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 visible h-auto py-8' : 'opacity-0 invisible h-0 overflow-hidden'}`}>
+        <div className="section-container flex flex-col gap-6 text-center">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-lg font-medium hover:text-[var(--accent-green)] transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <button
+            onClick={scrollToFooter}
+            className="btn-primary bg-white text-[var(--primary-green)] mx-auto"
+          >
+            Contact Us
+          </button>
+        </div>
       </div>
     </nav>
   );
 }
+

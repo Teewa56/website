@@ -14,13 +14,13 @@ export default function Home() {
         <CategoryTabs />
 
         {/* Banner Section from Image */}
-        <section className="section-container my-20">
-          <div className="relative w-full h-[400px] rounded-[40px] overflow-hidden bg-emerald-800 flex items-center p-12 text-white">
-            <div className="relative z-10 max-w-lg space-y-6">
-              <h2 className="text-5xl font-bold leading-tight">75% Off <br /> Heat Up the Deals!</h2>
-              <button className="btn-primary">Shop Now</button>
+        <section className="section-container my-12 md:my-20">
+          <div className="relative w-full min-h-[400px] md:h-[400px] rounded-[30px] md:rounded-[40px] overflow-hidden bg-emerald-800 flex flex-col md:flex-row items-center p-8 md:p-12 text-white">
+            <div className="relative z-10 max-w-lg space-y-6 text-center md:text-left mb-8 md:mb-0">
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">75% Off <br className="hidden md:block" /> Heat Up the Deals!</h2>
+              <button className="btn-primary bg-green-400">Shop Now</button>
             </div>
-            <div className="absolute right-0 bottom-0 top-0 w-1/2">
+            <div className="absolute right-0 bottom-0 top-0 w-full md:w-1/2 opacity-50 md:opacity-100">
               <Image
                 src="/images/orange.png"
                 alt="Orange deal"
@@ -29,16 +29,16 @@ export default function Home() {
               />
             </div>
             {/* Overlay gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-900 via-emerald-800/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-emerald-900 via-emerald-800/80 to-transparent" />
           </div>
         </section>
 
         <FeaturedProducts />
 
         {/* Value Proposition Section */}
-        <section className="bg-[var(--primary-green)] py-20 text-white overflow-hidden">
+        <section className="bg-[var(--primary-green)] py-16 md:py-20 text-white overflow-hidden">
           <div className="section-container grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px]">
+            <div className="relative h-[300px] md:h-[400px]">
               <Image
                 src="/images/luagropic1 (17) 1.png"
                 alt="Market basket"
@@ -46,49 +46,51 @@ export default function Home() {
                 className="object-contain"
               />
             </div>
-            <div className="space-y-8">
-              <h2 className="text-5xl font-bold leading-tight">We Bring <br /> The Market To <br /> <span className="text-[var(--accent-green)]">Your Home</span></h2>
-              <button className="btn-primary bg-green-400 px-8 py-2 text-lg">Shop Now</button>
+            <div className="space-y-8 text-center md:text-left">
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">We Bring <br /> The Market To <br /> <span className="text-[var(--accent-green)]">Your Home</span></h2>
+              <button className="btn-primary bg-green-400 px-8 py-3 text-lg">Shop Now</button>
             </div>
           </div>
         </section>
 
         {/* Testimonial Section */}
-        <section className="section-container py-32 grid md:grid-cols-2 gap-20 items-center">
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-[var(--primary-green)]">What Our Happy Customers Say</h2>
-            <div className="space-y-4">
-              <p className="text-2xl font-medium italic leading-relaxed text-gray-700">"Everything is always fresh and tastes amazing. This store really helps me stay on track with my healthy lifestyle!"</p>
-              <div className="flex items-center gap-4">
+        <section className="section-container py-20 md:py-32 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+          <div className="space-y-8 text-center md:text-left">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-green)]">What Our Happy Customers Say</h2>
+            <div className="space-y-6">
+              <p className="text-xl md:text-2xl font-medium italic leading-relaxed text-gray-700">"Everything is always fresh and tastes amazing. This store really helps me stay on track with my healthy lifestyle!"</p>
+              <div className="flex items-center justify-center md:justify-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-gray-200" />
-                <div>
+                <div className="text-left">
                   <div className="font-bold">James Carter</div>
                   <div className="text-sm opacity-60">Customer</div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="relative h-[500px] w-full bg-emerald-900/5 rounded-[100px] overflow-hidden">
-            <Image src="/images/Rectangle 43.png" alt="Market basket" fill className="object-contain" />
+          <div className="relative h-[300px] md:h-[500px] w-full bg-emerald-900/5 rounded-[40px] md:rounded-[100px] overflow-hidden">
+            <Image src="/images/Rectangle 43.png" alt="Happy customer" fill className="object-cover" />
           </div>
         </section>
 
         {/* Blog Post Section */}
-        <section className="section-container pb-32 text-center">
-          <h2 className="text-4xl font-bold mb-16 text-[var(--primary-green)]">Our Latest Post</h2>
-          <div className="relative max-w-4xl mx-auto">
-            <div className="relative h-[400px] mb-8 group overflow-hidden rounded-[40px]">
+        <section className="section-container pb-20 md:pb-32 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 md:text-[var(--primary-green)]">Our Latest Post</h2>
+          <div className="relative max-w-4xl mx-auto px-4">
+            <div className="relative h-[250px] sm:h-[350px] md:h-[400px] mb-8 group overflow-hidden rounded-[30px] md:rounded-[40px]">
               <Image src="/images/luagropic1 1.png" alt="Blog" fill className="object-cover transition-transform group-hover:scale-105" />
             </div>
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold">Why Green Fruits and Veggies Should Be in Your Cart</h3>
+              <h3 className="text-xl md:text-2xl font-bold px-4">Why Green Fruits and Veggies Should Be in Your Cart</h3>
               <p className="text-sm opacity-50">February 14, 2024</p>
               <button className="rounded-2xl font-bold bg-green-400 px-8 py-2 text-lg">Read More</button>
             </div>
 
-            {/* Scroll arrows */}
-            <Image width={50} height={50} className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 -translate-x-12" src="/images/arrows2.png" alt="Blog" />
-            <Image width={50} height={50} className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 translate-x-12" src="/images/arrow1.png" alt="Blog" />
+            {/* Scroll arrows - hidden on tiny mobile, smaller on small mobile */}
+            <div className="hidden sm:block">
+              <Image width={40} height={40} className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 -translate-x-6 lg:-translate-x-12" src="/images/arrows2.png" alt="Previous" />
+              <Image width={40} height={40} className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 translate-x-6 lg:translate-x-12" src="/images/arrow1.png" alt="Next" />
+            </div>
           </div>
         </section>
       </main>
@@ -96,4 +98,5 @@ export default function Home() {
     </div>
   );
 }
+
 
