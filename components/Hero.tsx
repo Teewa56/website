@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="relative py-12 md:py-20 bg-[var(--primary-green)] text-white overflow-hidden">
+        <section className="relative py-15 md:py-20 bg-[var(--primary-green)] text-white overflow-hidden">
             <div className="section-container relative z-10 grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-8 text-center md:text-left">
                     <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold leading-tight">

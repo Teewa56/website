@@ -37,7 +37,7 @@ export default function Home() {
 
         {/* Value Proposition Section */}
         <section className="bg-[var(--primary-green)] py-16 md:py-20 text-white overflow-hidden">
-          <div className="section-container grid md:grid-cols-2 gap-12 items-center">
+          <div className="section-container grid md:grid-cols-2 gap-3 md:gap-12 items-center">
             <div className="relative h-[300px] md:h-[400px]">
               <Image
                 src="/images/luagropic1 (17) 1.png"
@@ -77,9 +77,6 @@ export default function Home() {
         <section className="section-container pb-20 md:pb-32 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 md:text-[var(--primary-green)]">Our Latest Post</h2>
           <div className="relative max-w-4xl mx-auto px-4">
-            <div className="relative h-[250px] sm:h-[350px] md:h-[400px] mb-8 group overflow-hidden rounded-[30px] md:rounded-[40px]">
-              <Image src="/images/luagropic1 1.png" alt="Blog" fill className="object-cover transition-transform group-hover:scale-105" />
-            </div>
             <div className="space-y-4">
               <h3 className="text-xl md:text-2xl font-bold px-4">Why Green Fruits and Veggies Should Be in Your Cart</h3>
               <p className="text-sm opacity-50">February 14, 2024</p>
