@@ -21,25 +21,25 @@ export default function Footer() {
                     <h4 className="text-xl font-bold mb-6">Navigation</h4>
                     <ul className="space-y-4 text-white/60">
                         <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-                        <li><Link href="#about" className="hover:text-white transition-colors">About Us</Link></li>
-                        <li><Link href="#services" className="hover:text-white transition-colors">Services</Link></li>
-                        <li><Link href="#shop" className="hover:text-white transition-colors">Shop</Link></li>
+                        <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                        <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
+                        <li><Link href="/shop" className="hover:text-white transition-colors">Shop</Link></li>
                     </ul>
                 </div>
 
                 <div className="text-center sm:text-left">
                     <h4 className="text-xl font-bold mb-6">Quick Link</h4>
                     <ul className="space-y-4 text-white/60">
-                        <li><Link href="#contact" className="hover:text-white transition-colors">Contact Us</Link></li>
-                        <li><Link href="#faq" className="hover:text-white transition-colors">FAQ</Link></li>
-                        <li><Link href="#blog" className="hover:text-white transition-colors">Blog</Link></li>
+                        <li><Link href="/about#contact" className="hover:text-white transition-colors">Contact Us</Link></li>
+                        <li><Link href="/#faq" className="hover:text-white transition-colors">FAQ</Link></li>
+                        <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
                     </ul>
                 </div>
 
                 <div className="text-center sm:text-left">
                     <h4 className="text-xl font-bold mb-6">Information</h4>
                     <ul className="space-y-4 text-white/60 text-sm">
-                        <li>(224) 555-0103</li>
+                        <li>09161865135</li>
                         <li>125 Main Street, 2nd Floor</li>
                         <li>support@luagro.com</li>
                     </ul>
@@ -51,7 +51,7 @@ export default function Footer() {
             </div>
 
             <div className="section-container pt-8 text-center text-white/40 text-sm px-4">
-                © {new Date().getFullYear()} Luagro. All rights reserved.
+                Luagro © {new Date().getFullYear()}. All rights reserved.
             </div>
         </footer>
     );

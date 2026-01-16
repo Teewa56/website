@@ -19,16 +19,18 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About Us", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Shop", href: "#shop" },
-    { name: "Pages", href: "#pages" },
+    { name: "About Us", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Shop", href: "/shop" },
+    { name: "Blog", href: "/blog" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#4B6F44]/90 backdrop-blur-md text-white py-4">
       <div className="section-container flex items-center justify-between">
-        <Image width={100} height={50} src="/images/luaro 1.png" alt="Logo" />
+        <Link href="/">
+          <Image width={100} height={50} src="/images/luaro 1.png" alt="Logo" />
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
