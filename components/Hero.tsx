@@ -12,8 +12,7 @@ export default function Hero() {
                     alt="Luagro Background"
                     className="object-cover opacity-40 scale-105"
                     priority
-                    width={1920}
-                    height={1080}
+                    fill
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary-green)] via-[var(--primary-green)]/80 to-transparent" />
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--accent-green)]/20 rounded-full blur-[120px] -mr-64 -mt-64 animate-pulse" />
@@ -69,7 +68,7 @@ export default function Hero() {
                 </div>
 
                 <div className="relative group">
-                    <div className="relative h-[400px] sm:h-[500px] md:h-[650px] w-full transform transition-transform duration-700 group-hover:scale-105 translate-z-0">
+                    <div className="relative h-[400px] sm:h-[500px] hidden md:block md:h-[650px] w-full transform transition-transform duration-700 group-hover:scale-105 translate-z-0">
                         <Image
                             src="/images/image.png"
                             alt="Fresh products"

@@ -43,7 +43,7 @@ export default function Home() {
         {/* Value Proposition Section */}
         <section className="bg-[var(--primary-green)] py-16 md:py-20 text-white overflow-hidden">
           <div className="section-container grid md:grid-cols-2 gap-3 md:gap-12 items-center">
-            <div className="relative h-[300px] md:h-[400px]">
+            <div className="relative h-[300px] hidden md:block md:h-[400px]">
               <Image
                 src="/images/luagropic1 (17) 1.png"
                 alt="Market basket"

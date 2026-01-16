@@ -57,7 +57,7 @@ export default function ShopPage() {
                                 </button>
                             </div>
                         </div>
-                        <div className="relative h-[400px] md:h-[600px] animate-fade-in-right">
+                        <div className="relative h-[400px] md:h-[600px] animate-fade-in-right hidden md:block">
                             <Image
                                 src="/images/corn.png"
                                 alt="Corn Harvest"
@@ -144,7 +144,7 @@ export default function ShopPage() {
                             </div>
                             <h2 className="text-3xl md:text-5xl font-black leading-tight">Buy More <br /> <span className="text-[var(--accent-green)] underline decoration-wavy decoration-white/20 underline-offset-8">Save More</span></h2>
                         </div>
-                        <div className="relative w-full md:w-1/2 h-[300px] md:h-full md:absolute md:right-0 md:top-0 animate-pulse-slow">
+                        <div className="relative hidden md:block w-full md:w-1/2 h-[300px] md:h-full md:absolute md:right-0 md:top-0 animate-pulse-slow">
                             <Image
                                 src="/images/cart.jpg"
                                 alt="Buy More Save More"
