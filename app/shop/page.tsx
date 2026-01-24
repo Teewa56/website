@@ -125,7 +125,7 @@ export default function ShopPage() {
                                 Explore All <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                             </Link>
                         </div>
-                        <div className="flex flex-row gap-8 overflow-hidden">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                             {products.Fruits.map((p, i) => (
                                 <ProductCard key={i} {...p} />
                             ))}
