@@ -19,13 +19,46 @@ const categories = [
 
 const products = {
     "Fruits": [
+        { name: "Apple", price: "₦500", image: "/images/apple.webp", category: "Fruits" },
+        { name: "Mango", price: "₦500", image: "/images/mango.jpg", category: "Fruits" },
+        { name: "Pineapple", price: "₦2000", image: "/images/pineapple.jpg", category: "Fruits" },
         { name: "Orange", price: "₦530", image: "/images/orange.png", category: "Fruits" },
-        { name: "Fresh Apple", price: "₦1200", image: "/images/luagropic1 (17) 1.png", category: "Fruits" },
     ],
     "Grains": [
         { name: "Beans", price: "₦1530", image: "/images/luagropic1 (9) 1.png", category: "Grains" },
         { name: "Cornflakes", price: "₦2500", image: "/images/cornflakes.jpg", category: "Grains" },
+        { name: "Rice (1.2kg)", price: "₦2250", image: "/images/rice.jpg", category: "Grains" },
+        { name: "Egusi Grains", price: "₦2000", image: "/images/egusi.jpg", category: "Grains" },
     ],
+    "Flours": [
+        { name: "Poundo Yam Flour", price: "₦2000", image: "/images/poundo.jpg", category: "Flours" },
+        { name: "Amala (Yam Flour)", price: "₦2000", image: "/images/amala.webp", category: "Flours" }
+    ],
+    "Meats": [
+        { name: "Beef", price: "₦2500", image: "/images/beef.jpg", category: "Meats" },
+        { name: "Catfish", price: "₦3500", image: "/images/catfish.webp", category: "Meats" },
+        { name: "Grilled Fish", price: "₦5000", image: "/images/grilled-fish.jpg", category: "Meats" }
+    ],
+    "Vegetables": [
+        { name: "Onions", price: "₦300", image: "/images/onions.webp", category: "Vegetables" },
+        { name: "Tomatoes", price: "₦500", image: "/images/tomatoes.webp", category: "Vegetables" },
+        { name: "Sweet Potatoes", price: "₦1000", image: "/images/sweetpotatoes.webp", category: "Vegetables" },
+        { name: "Plantain (Bunch)", price: "₦2000", image: "/images/plantain.jpg", category: "Vegetables" },
+        { name: "Vegetables", price: "₦1200", image: "/images/luagropic1 (17) 1.png", category: "Vegetables" },
+    ],
+    "Dairy": [
+        { name: "Eggs (Single)", price: "₦200", image: "/images/eggs.jpg", category: "Dairy" }
+    ],
+    "Spices": [
+        { name: "Cooking Oil", price: "₦500", image: "/images/oil.png", category: "Spices" }
+    ],
+    "Bakery": [
+        { name: "Bread", price: "₦1500", image: "/images/bread.png", category: "Bakery" }
+    ],
+    "Legumes": [
+        { name: "Brown Beans", price: "₦3200", image: "/images/legumes.jpg", category: "Legumes" },
+        { name: "Soya Beans", price: "₦2800", image: "/images/luagropic1 (9) 1.png", category: "Legumes" }
+    ]
 };
 
 export default function ShopPage() {
@@ -92,12 +125,10 @@ export default function ShopPage() {
                                 Explore All <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                             </Link>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div className="flex flex-row gap-8 overflow-hidden">
                             {products.Fruits.map((p, i) => (
                                 <ProductCard key={i} {...p} />
                             ))}
-                            <ProductCard name="Mango" price="₦800" image="/images/orange.png" category="Fruits" />
-                            <ProductCard name="Pineapple" price="₦1500" image="/images/luagropic1 (17) 1.png" category="Fruits" isSpecial />
                         </div>
                     </div>
 
@@ -113,8 +144,81 @@ export default function ShopPage() {
                             {products.Grains.map((p, i) => (
                                 <ProductCard key={i} {...p} />
                             ))}
-                            <ProductCard name="Rice" price="₦4500" image="/images/luagropic1 (9) 1.png" category="Grains" isSpecial />
-                            <ProductCard name="Pasta" price="₦800" image="/images/spag.png" category="Grains" />
+                        </div>
+                    </div>
+
+                    {/* Vegetables Section */}
+                    <div className="space-y-10">
+                        <div className="flex items-center justify-between">
+                            <h2 className="text-4xl font-black text-[var(--primary-green)]">Organic Vegetables</h2>
+                            <Link href="#" className="flex items-center gap-2 font-black text-[var(--accent-green)] group">
+                                Explore All <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+                            </Link>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {products.Vegetables.map((p, i) => (
+                                <ProductCard key={i} {...p} />
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Meats Section */}
+                    <div className="space-y-10">
+                        <div className="flex items-center justify-between">
+                            <h2 className="text-4xl font-black text-[var(--primary-green)]">Premium Meats</h2>
+                            <Link href="#" className="flex items-center gap-2 font-black text-[var(--accent-green)] group">
+                                Explore All <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+                            </Link>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {products.Meats.map((p, i) => (
+                                <ProductCard key={i} {...p} />
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Dairy Section */}
+                    <div className="space-y-10">
+                        <div className="flex items-center justify-between">
+                            <h2 className="text-4xl font-black text-[var(--primary-green)]">Fresh Dairy</h2>
+                            <Link href="#" className="flex items-center gap-2 font-black text-[var(--accent-green)] group">
+                                Explore All <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+                            </Link>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {products.Dairy.map((p, i) => (
+                                <ProductCard key={i} {...p} />
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Spices Section */}
+                    <div className="space-y-10">
+                        <div className="flex items-center justify-between">
+                            <h2 className="text-4xl font-black text-[var(--primary-green)]">Aromatic Spices</h2>
+                            <Link href="#" className="flex items-center gap-2 font-black text-[var(--accent-green)] group">
+                                Explore All <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+                            </Link>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {products.Spices.map((p, i) => (
+                                <ProductCard key={i} {...p} />
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Legumes Section */}
+                    <div className="space-y-10">
+                        <div className="flex items-center justify-between">
+                            <h2 className="text-4xl font-black text-[var(--primary-green)]">Healthy Legumes</h2>
+                            <Link href="#" className="flex items-center gap-2 font-black text-[var(--accent-green)] group">
+                                Explore All <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+                            </Link>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {products.Legumes.map((p, i) => (
+                                <ProductCard key={i} {...p} />
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -126,7 +230,7 @@ export default function ShopPage() {
                             <h2 className="text-4xl md:text-5xl font-black text-[var(--primary-green)]">Browse All Categories</h2>
                             <p className="text-gray-500 text-xl">Find exactly what you're looking for by browsing our curated collections.</p>
                         </div>
-                        <div className="flex gap-10 overflow-x-auto scrollbar-hide pb-10">
+                        <div className="flex gap-10 overflow-hidden scrollbar-hide pb-10">
                             {categories.map((cat) => (
                                 <CategoryCard key={cat.name} name={cat.name} image={cat.image} itemCount={cat.count} />
                             ))}

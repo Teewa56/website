@@ -5,7 +5,7 @@ const products = [
     { name: "Pepper", price: "₦3230", image: "/images/luagropic1 (17) 1.png", category: "Organic Fresh", isSpecial: true },
     { name: "Tomato", price: "₦1230", image: "/images/luagropic1 (8) 1.png", category: "Farm Fresh" },
     { name: "Beans", price: "₦1530", image: "/images/luagropic1 (9) 1.png", category: "Beans" },
-    { name: "Orange", price: "₦530", image: "/images/luagropic1 1.png", category: "Farm Fresh" },
+    { name: "Orange", price: "₦530", image: "/images/orange.png", category: "Farm Fresh" },
     { name: "Pasta", price: "₦530", image: "/images/spag.png", category: "Farm Fresh" },
     { name: "Vgetable Oil", price: "530", image: "/images/oil.png", category: "Farm Fresh" },
 ];
